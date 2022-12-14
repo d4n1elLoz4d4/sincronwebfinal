@@ -1,0 +1,80 @@
+<form method="post" enctype="multipart/form-data">
+  
+    {% csrf_token %}
+
+    {% for campo in formulario %}
+
+        {% if campo.name == 'gestionClienteRegistro' %}
+            <div class="mb-3">
+                <label for="" class="form-label">{{campo.label}}</label>
+                <input
+                    type="date"
+                    class="form-control"
+                    name="{{campo.name}}"
+                    id=""
+                    aria-describedby="helpid"
+                    placeholder="{{campo.label}}"
+                    value="{{campo.value | default:''}}"
+                    />        
+            </div>
+            <div class="col-12 help-text">{{campo.errors}}</div>
+        {% endif %}
+
+        {% if campo.name == 'gestionClienteObservacion' %}
+            <div class="mb-3">
+                <label for="" class="form-label">{{campo.label}}</label>
+                <input
+                    type="{{campo.field.widget.input_type}}"
+                    class="form-control"
+                    name="{{campo.name}}"
+                    id=""
+                    aria-describedby="helpid"
+                    placeholder="{{campo.label}}"
+                    value="{{campo.value | default:''}}"
+                    />        
+            </div>
+            <div class="col-12 help-text">{{campo.errors}}</div>
+        {% endif %}
+
+        {% if campo.name == 'gestionClienteTiempoInvertido' %}
+            <div class="mb-3">
+                <label for="" class="form-label">{{campo.label}}</label>
+                <input
+                    type="number"
+                    class="form-control"
+                    name="{{campo.name}}"
+                    id=""
+                    aria-describedby="helpid"
+                    placeholder="{{campo.label}}"
+                    value="{{campo.value | default:''}}"
+                    />        
+            </div>
+            <div class="col-12 help-text">{{campo.errors}}</div>
+        {% endif %}
+
+        {% if campo.name == 'EstadoGestion_idEstadoGestion' %}
+            <div class="mb-3">
+                <label for="" class="form-label">{{campo.label}}</label>
+
+                <select class="form-select" aria-label="Default select example">
+
+                    {% for estado in ListaEstados %}
+
+                        {% if campo.value == estado.idEstadoGestion %}
+                            <option value="{{estado.idEstadoGestion}}" selected="selected">{{estado.idEstadoGestion}} - {{estado.estadoGestionNombre}}</option>
+                        {% else %}
+                            <option value="{{estado.idEstadoGestion}}">{{estado.idEstadoGestion}} - {{estado.estadoGestionNombre}}</option>
+                        {% endif %}
+                        
+                    {% endfor %}
+
+                    <option selected>{{estado.estadoGestionNombre}}</option>
+                </select>       
+            </div>
+            <div class="col-12 help-text">{{campo.errors}}</div>
+        {% endif %}
+    
+    {% endfor %}
+    <input name="" id="" class="btn btn-success" type="submit" value="Guardar">    
+    <a name="" id="" class="btn btn-success" href="{% url 'inicio' %}" role="button">Cancelar</a>
+</form>

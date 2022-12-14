@@ -1,0 +1,61 @@
+{% extends 'partials/body.html' %}
+
+{% block container %}
+<!-- Cuerpo de la tabla"> -->
+<div class="card">
+  <div class="card-header">
+    <a name="" id="" class="btn btn-success" href="{% url 'creaAuditoria' %}" role="button">Agregar</a>
+
+    <!--<form>
+        <input type="" name="Agregar">
+        <button>Buscar</button>
+    </form>-->
+
+  </div>
+  <div class="card-body">
+    <h4 class="card-title">Auditoria</h4>
+
+    <div class="table-responsive">
+      <table class="table table-striped
+      table-hover	
+      table-borderless
+      align-middle">
+        <thead>
+          <tr>
+            <th>Código</th>
+            <th>Nombre</th>
+            <th>Descripción</th>
+            <th>Registro</th>  
+            <th>Usuario</th>  
+            <th>Activo?</th>
+            <th>Acciones</th> 
+          </tr>
+        </thead>
+        <tbody>
+          {% for item in Auditoria %}                     
+            <tr>
+              <td>{{item.idAuditoria}}</td>
+              <td>{{item.auditoriaNombre}}</td>
+              <td>{{item.auditoriaDescripcion}}</td>
+              <td>{{item.auditoriaRegistro}}</td>
+              <td>{{item.Usuario_idUsuario}}</td>
+              <td>{{item.GestionCliente_idGestionCliente}}</td>
+              <td>
+
+                  <div class="btn-group">
+                      
+                      <a name="" id="" class="btn btn-info" href="{% url 'editarAuditoria' item.idAuditoria %}" role="button">Editar</a>
+                      <a name="" id="" class="btn btn-danger" href="{% url 'eliminarAuditoria' item.idAuditoria %}" role="button">Eliminar</a>
+                      
+                  </div>  
+
+              </td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>  
+  </div>
+</div>
+
+{% endblock container %}
