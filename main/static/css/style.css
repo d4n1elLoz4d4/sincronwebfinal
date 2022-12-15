@@ -3,7 +3,7 @@
     --bs-dark: rgb(0, 133, 202);
     --bs-dark-rgb: 0, 133, 202;
      /* --bs-body-font-family: var(--bs-font-sans-serif);*/
-     --bs-body-font-family:'Barlow Semi Condensed', sans-serif; 
+     font-family:'Barlow Semi Condensed', sans-serif; 
   }
 
   .link-dark {
