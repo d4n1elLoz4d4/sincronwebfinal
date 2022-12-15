@@ -4,7 +4,7 @@
 <!-- Cuerpo de la tabla"> -->
 <div class="card">
   <div class="card-header">
-    <a name="" id="" class="btn btn-primary" href="{% url 'creausuario' %}" role="button">Agregar Usuario</a>
+    <a name="" id="" class="btn btn-primary boton-color" href="{% url 'creausuario' %}" role="button">Agregar Usuario</a>
 
   </div>
   <div class="card-body">
@@ -21,10 +21,10 @@
             <th>Nombre</th>
             <th>Apellido</th>
             <th>Tipo de Documento</th>
-            <th>Numero Documento</th>
+            <th>Número Documento</th>
             <th>Correo Electronico</th>
             <th>Descripción</th>
-            <th>Activo?</th>
+            <th>Activo</th>
             <th>Acciones</th>
           </tr>
         </thead>
@@ -43,7 +43,7 @@
 
                   <div class="btn-group">
                       
-                      <a name="" id="" class="btn btn-primary" href="{% url 'editarusuario' item.idUsuario %}" role="button">Editar</a>
+                      <a name="" id="" class="btn btn-primary boton-color" href="{% url 'editarusuario' item.idUsuario %}" role="button">Editar</a>
                       <a name="" id="" class="btn btn-danger" href="{% url 'eliminarusuario' item.idUsuario %}" role="button">Eliminar</a>
                       
                   </div>  

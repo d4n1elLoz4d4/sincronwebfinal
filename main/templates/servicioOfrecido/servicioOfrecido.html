@@ -4,7 +4,7 @@
 <!-- Cuerpo de la tabla"> -->
 <div class="card">
   <div class="card-header">
-    <a name="" id="" class="btn btn-primary" href="{% url 'creaServicioOfrecido' %}" role="button">Agregar Servicio Ofrecido</a>
+    <a name="" id="" class="btn btn-primary boton-color" href="{% url 'creaServicioOfrecido' %}" role="button">Agregar Servicio Ofrecido</a>
 
   </div>
   <div class="card-body">
@@ -20,7 +20,7 @@
             <th>Código</th>
             <th>Nombre</th>
             <th>Descripción</th>
-            <th>Activo?</th>
+            <th>Activo</th>
             <th>Acciones</th>
           </tr>
         </thead>
@@ -35,7 +35,7 @@
 
                   <div class="btn-group">
                       
-                      <a name="" id="" class="btn btn-primary" href="{% url 'editarServicioOfrecido' item.idServicioOfrecido %}" role="button">Editar</a>
+                      <a name="" id="" class="btn btn-primary boton-color" href="{% url 'editarServicioOfrecido' item.idServicioOfrecido %}" role="button">Editar</a>
                       <a name="" id="" class="btn btn-danger" href="{% url 'eliminarServicioOfrecido' item.idServicioOfrecido %}" role="button">Eliminar</a>
                       
                   </div>  
