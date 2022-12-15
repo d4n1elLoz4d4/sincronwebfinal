@@ -4,7 +4,7 @@
 <!-- Cuerpo de la tabla"> -->
 <div class="card">
   <div class="card-header">
-    <a name="" id="" class="btn btn-primary" href="{% url 'creaAuditoria' %}" role="button">Agregar</a>
+    <a name="" id="" class="btn btn-primary boton-color" href="{% url 'creaAuditoria' %}" role="button">Agregar</a>
 
     <!--<form>
         <input type="" name="Agregar">
@@ -13,7 +13,7 @@
 
   </div>
   <div class="card-body">
-    <h4 class="card-title">Auditoria</h4>
+    <h4 class="card-title">Auditoría</h4>
 
     <div class="table-responsive">
       <table class="table table-striped
@@ -27,7 +27,7 @@
             <th>Descripción</th>
             <th>Registro</th>  
             <th>Usuario</th>  
-            <th>Activo?</th>
+            <th>Activo</th>
             <th>Acciones</th> 
           </tr>
         </thead>
@@ -44,7 +44,7 @@
 
                   <div class="btn-group">
                       
-                      <a name="" id="" class="btn btn-primary" href="{% url 'editarAuditoria' item.idAuditoria %}" role="button">Editar</a>
+                      <a name="" id="" class="btn btn-primary boton-color" href="{% url 'editarAuditoria' item.idAuditoria %}" role="button">Editar</a>
                       <a name="" id="" class="btn btn-danger" href="{% url 'eliminarAuditoria' item.idAuditoria %}" role="button">Eliminar</a>
                       
                   </div>  

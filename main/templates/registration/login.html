@@ -13,26 +13,68 @@
 <main class="form-signin w-100 m-auto" style="max-width: 330px">
     <form method="Post">
         {% csrf_token %}
-        <img class="mb-4" src="{% static 'img/LogoHorizontal.webp' %}" alt="" >
-        <br/>
-        <h1 class="h3 mb-3 fw-normal">Inicio de Sesion</h1>
 
-        <div class="input-group mb-3">
-            {{form.username}}
-        </div>
-        <div class="input-group mb-3">
-            {{form.password}}
-        </div>
+        <table class="table">
 
-        <div class="checkbox mb-3">
-        <label>
-            <input type="checkbox" value="remember-me"> Recordar Contraseña
-        </label>
-        </div>
-
-        <input type="submit" class="w-100 btn btn-lg btn-primary" value="Ingresar">
-  
-        <p class="mt-5 mb-3 text-muted">© 2017–2022</p>
+            <tbody>
+                <tr>
+                  <td colspan="2">
+                    <img class="mb-4" src="{% static 'img/LogoHorizontal.webp' %}" alt="" >
+                  </td>
+                  <td>
+                </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <h1 class="h3 mb-3 fw-normal" align="center">Inicio de Sesión</h1>
+                    </td>
+                    <td >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                        <p>Usuario:</p>
+                    </td>
+                    <td>
+                        <div class="mb-4">
+                            {{form.username}}
+                        </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                        <p>Contraseña:</p>
+                    </td>
+                    <td>
+                        <div class="input-group mb-3">
+                            {{form.password}}
+                        </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colspan="2">
+                        <div class="checkbox mb-3">
+                            <label>
+                                <input type="checkbox" value="remember-me"> Recordar Contraseña
+                            </label>
+                            </div>
+                    </td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                      <td colspan="2">
+                        <input type="submit" class="w-100 btn btn-lg btn-primary boton-color" value="Ingresar">
+                      </td>
+                      <td></td>
+                  </tr>
+                  <tr>
+                    <td colspan="2">
+                        <p align="center" class="mt-5 mb-3 text-muted">© 2017–2022</p>
+                    </td>
+                    <td></td>
+                </tr>
+              </tbody>
+        </table>
     </form>
 </main>
 
