@@ -29,16 +29,16 @@
           </tr>
         </thead>
         <tbody>
-          {% for usuario in usuarios %}                     
+          {% for item in Listausuario %}                     
             <tr>
-              <td>{{usuario.idUsuario}}</td>
-              <td>{{usuario.usuarioNombre}}</td>
-              <td>{{usuario.usuarioApellido}}</td>
-              <td>{{usuario.usuarioTipoDocumento}}</td>
-              <td>{{usuario.usuarioNumeroDocumento}}</td>
-              <td>{{usuario.usuarioCorreo}}</td>
-              <td>{{usuario.usuarioRol}}</td>
-              <td>{{usuario.usuarioActivo}}</td>
+              <td>{{item.idUsuario}}</td>
+              <td>{{item.usuarioNombre}}</td>
+              <td>{{item.usuarioApellido}}</td>
+              <td>{{item.usuarioTipoDocumento}}</td>
+              <td>{{item.usuarioNumeroDocumento}}</td>
+              <td>{{item.usuarioCorreo}}</td>
+              <td>{{item.usuarioRol}}</td>
+              <td>{{item.usuarioActivo}}</td>
               <td>
 
                   <div class="btn-group">

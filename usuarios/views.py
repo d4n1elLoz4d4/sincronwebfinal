@@ -1,10 +1,10 @@
 from django.shortcuts import render, redirect
 from usuarios.forms import UsuarioForm
-from usuarios.models import UsuarioLogin
 from django.contrib import messages
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required, permission_required
 from django.contrib.auth.hashers import make_password
+from django.contrib.auth import logout
 
 # Create your views here.
 def usuarios(request):
@@ -91,3 +91,14 @@ def usuarios_eliminar(request, pk):
      
     }
     return render(request,'usuarios/usuarios.html',context)    
+
+def loggedIn(request):
+     if request.user.is_authenticated:
+         respuesta:"Ingresado como "+ request.user.username
+     else:
+         respuesta:"No estas autenticado."
+     return HttpResponse(respuesta)
+
+def logout_user(request):
+    logout(request)
+    return redirect('inicio')
